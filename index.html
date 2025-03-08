@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binas Prime Enterprise</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Binas Prime</h1>
+            <p>Catering Enterprise</p>
+        </div>
+        <nav>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <a href="#cart" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Delicious Treats for Every Occasion</h1>
+            <p>Handcrafted cakes, pastries, and savory delights made with love</p>
+            <a href="#shop" class="cta-button">Order Now</a>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="featured">
+        <h2>Customer Favorites</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="/api/placeholder/400/300" alt="Chocolate Cake">
+                </div>
+                <h3>Chocolate Cake</h3>
+                <p>Rich, moist chocolate cake with ganache frosting</p>
+                <p class="price">$35.99</p>
+                <button class="add-to-cart" data-id="p1" data-name="Chocolate Cake" data-price="35.99">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="/api/placeholder/400/300" alt="Glazed Doughnuts">
+                </div>
+                <h3>Glazed Doughnuts</h3>
+                <p>Classic glazed doughnuts, box of 6</p>
+                <p class="price">$12.99</p>
+                <button class="add-to-cart" data-id="p2" data-name="Glazed Doughnuts" data-price="12.99">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="/api/placeholder/400/300" alt="Meat Turnovers">
+                </div>
+                <h3>Meat Turnovers</h3>
+                <p>Savory pastries filled with seasoned meat, pack of 4</p>
+                <p class="price">$18.99</p>
+                <button class="add-to-cart" data-id="p3" data-name="Meat Turnovers" data-price="18.99">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-content">
+            <div class="about-image">
+                <img src="/api/placeholder/500/400" alt="Binas Prime Team">
+            </div>
+            <div class="about-text">
+                <h2>About Binas Prime Enterprise</h2>
+                <p>Founded in 2015, Binas Prime Enterprise has been serving the community with delicious baked goods and savory treats for all occasions.</p>
+                <p>Our team of passionate bakers and chefs use only the finest ingredients to create mouth-watering cakes, doughnuts, cookies, turnovers, and more. Every item is handcrafted with love and attention to detail.</p>
+                <p>Whether you're celebrating a special occasion or simply craving something sweet, we've got you covered. We also provide catering services for events of all sizes.</p>
+                <a href="#contact" class="cta-button">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section id="shop" class="shop">
+        <h2>Our Products</h2>
+        
+        <div class="category-filter">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="cakes">Cakes</button>
+            <button class="filter-btn" data-category="pastries">Pastries</button>
+            <button class="filter-btn" data-category="savory">Savory</button>
+        </div>
+        
+        <div class="product-grid" id="shop-products">
+            <!-- Products will be loaded here via JavaScript -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Baker Street, Foodville</p>
+                <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                <p><i class="fas fa-envelope"></i> info@binasprimeenterprise.com</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+                <div class="business-hours">
+                    <h4>Business Hours</h4>
+                    <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
+                    <p>Saturday: 9:00 AM - 5:00 PM</p>
+                    <p>Sunday: Closed</p>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h3>Send us a Message</h3>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="cta-button">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Your Shopping Cart</h2>
+            <div id="cart-items">
+                <!-- Cart items will be added here -->
+            </div>
+            <div class="cart-total">
+                <p>Total: <span id="cart-total">$0.00</span></p>
+            </div>
+            <button id="checkout-btn" class="cta-button">Proceed to Checkout</button>
+            <button id="clear-cart" class="secondary-button">Clear Cart</button>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div id="checkout-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-checkout-modal">&times;</span>
+            <h2>Checkout</h2>
+            <form id="checkout-form">
+                <div class="form-group">
+                    <label for="checkout-name">Full Name</label>
+                    <input type="text" id="checkout-name" name="checkout-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="checkout-email">Email</label>
+                    <input type="email" id="checkout-email" name="checkout-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="checkout-phone">Phone</label>
+                    <input type="tel" id="checkout-phone" name="checkout-phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="checkout-address">Delivery Address</label>
+                    <textarea id="checkout-address" name="checkout-address" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="checkout-payment">Payment Method</label>
+                    <select id="checkout-payment" name="checkout-payment" required>
+                        <option value="">Select Payment Method</option>
+                        <option value="credit-card">Credit Card</option>
+                        <option value="debit-card">Debit Card</option>
+                        <option value="paypal">PayPal</option>
+                        <option value="cash">Cash on Delivery</option>
+                    </select>
+                </div>
+                <div class="checkout-summary">
+                    <h3>Order Summary</h3>
+                    <div id="checkout-items">
+                        <!-- Checkout items will be added here -->
+                    </div>
+                    <div class="checkout-total">
+                        <p>Total: <span id="checkout-total">$0.00</span></p>
+                    </div>
+                </div>
+                <button type="submit" class="cta-button">Place Order</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Order Confirmation Modal -->
+    <div id="confirmation-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-confirmation-modal">&times;</span>
+            <div class="confirmation-message">
+                <i class="fas fa-check-circle"></i>
+                <h2>Order Placed Successfully!</h2>
+                <p>Thank you for your order. We have received your order and will process it shortly.</p>
+                <p>A confirmation email has been sent to your email address.</p>
+                <p>Your order number is: <span id="order-number"></span></p>
+                <button id="continue-shopping" class="cta-button">Continue Shopping</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Binas Prime</h2>
+                <p>Catering Enterprise</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Join Our Newsletter</h3>
+                <p>Stay updated with our latest offers and promotions</p>
+                <form id="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Binas Prime Enterprise. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
