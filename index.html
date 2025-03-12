@@ -45,33 +45,45 @@
     <section class="featured">
         <h2>Customer Favorites</h2>
         <div class="product-grid">
-            <div class="product-card">
+            <div class="product-card" data-id="p1">
                 <div class="product-image">
-                    <img src="/api/placeholder/400/300" alt="Chocolate Cake">
+                    <img src="images/birthday cake-min.jpg" alt="Cakes">
                 </div>
-                <h3>Chocolate Cake</h3>
-                <p>Rich, moist chocolate cake with ganache frosting</p>
+                
+                <p>Rich, moist cakes for all occasions</p>
                 <p class="price">$35.99</p>
-                <button class="add-to-cart" data-id="p1" data-name="Chocolate Cake" data-price="35.99">Add to Cart</button>
+                <button class="add-to-cart" data-id="p1" data-name="Cakes" data-price="35.99">Add to Cart</button>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-id="p2">
                 <div class="product-image">
-                    <img src="/api/placeholder/400/300" alt="Glazed Doughnuts">
+                    <img src="images/Baked-dougnut.jpg" alt=" Doughnuts">
                 </div>
-                <h3>Glazed Doughnuts</h3>
-                <p>Classic glazed doughnuts, box of 6</p>
+               
+                <p>Classic baked doughnuts, box of 6</p>
                 <p class="price">$12.99</p>
-                <button class="add-to-cart" data-id="p2" data-name="Glazed Doughnuts" data-price="12.99">Add to Cart</button>
+                <button class="add-to-cart" data-id="p2" data-name=" Doughnuts" data-price="12.99">Add to Cart</button>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-id="p3">
                 <div class="product-image">
-                    <img src="/api/placeholder/400/300" alt="Meat Turnovers">
+                    <img src="images/hq720 (1).jpg" alt="Meat/Fish Turnovers">
                 </div>
-                <h3>Meat Turnovers</h3>
-                <p>Savory pastries filled with seasoned meat, pack of 4</p>
+               
+                <p>Savory Meat/Fish Turnovers</p>
                 <p class="price">$18.99</p>
-                <button class="add-to-cart" data-id="p3" data-name="Meat Turnovers" data-price="18.99">Add to Cart</button>
+                <button class="add-to-cart" data-id="p3" data-name="Meat/Fish Turnovers" data-price="18.99">Add to Cart</button>
             </div>
+
+            <div class="product-card" data-id="p3">
+                <div class="product-image">
+                    <img src="images/07be9fd503177e7fa01c028335cd0bb7.jpg" alt="Samosas">
+                </div>
+               
+                <p>Golden, Crunchy Samosas  </p>
+                <p class="price">$18.99</p>
+                <button class="add-to-cart" data-id="p3" data-name="Samosas" data-price="18.99">Add to Cart</button>
+            </div>
+
+
         </div>
     </section>
 
@@ -103,7 +115,34 @@
         </div>
         
         <div class="product-grid" id="shop-products">
-            <!-- Products will be loaded here via JavaScript -->
+            <!-- Sample products - these would typically be loaded dynamically -->
+            <div class="product-card" data-id="p4" data-category="cakes">
+                <div class="product-image">
+                    <img src="/api/placeholder/400/300" alt="Birthday Cake">
+                </div>
+                <h3>Birthday Cake</h3>
+                <p>Customizable birthday cake with your choice of flavors</p>
+                <p class="price">$45.99</p>
+                <button class="add-to-cart" data-id="p4" data-name="Birthday Cake" data-price="45.99">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="p5" data-category="pastries">
+                <div class="product-image">
+                    <img src="/api/placeholder/400/300" alt="Croissants">
+                </div>
+                <h3>Croissants</h3>
+                <p>Buttery, flaky croissants, pack of 4</p>
+                <p class="price">$8.99</p>
+                <button class="add-to-cart" data-id="p5" data-name="Croissants" data-price="8.99">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="p6" data-category="savory">
+                <div class="product-image">
+                    <img src="/api/placeholder/400/300" alt="Quiche">
+                </div>
+                <h3>Quiche</h3>
+                <p>Savory egg custard with vegetables and cheese in a pastry crust</p>
+                <p class="price">$22.99</p>
+                <button class="add-to-cart" data-id="p6" data-name="Quiche" data-price="22.99">Add to Cart</button>
+            </div>
         </div>
     </section>
 
