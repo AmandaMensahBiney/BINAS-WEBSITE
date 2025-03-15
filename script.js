@@ -357,47 +357,100 @@ document.addEventListener('DOMContentLoaded', function() {
     const productModalName = document.getElementById('product-modal-name');
     const productModalDescription = document.getElementById('product-modal-description');
     const productModalPrice = document.getElementById('product-modal-price');
-    const addToCartModalBtn = document.getElementById('add-to-cart-modal');
-    let selectedProduct = {};
 
-    // Open modal when clicking on a product
+
+    
+    // Product data - add your descriptions and prices here
+    const productData = {
+        "Cakes": {
+            description: "Delicious homemade cakes for all occasions. Our cakes are baked with the finest ingredients, ensuring rich flavor and perfect texture with every bite.",
+            price: "Depending on your order"
+        },
+        "Garlic Flour Chips": {
+            description: "Crispy, savory garlic-flavored chips made from premium flour. A perfect snack for any time of day with just the right amount of garlic flavor.",
+            price: "Depending on your order"
+        },
+        "Spring Rolls": {
+            description: "Fresh vegetable spring rolls with a crispy outer layer. Served with our special dipping sauce that complements the flavors perfectly.",
+            price: "Depending on your order"
+        
+        },
+        "Ginger Cookies": {
+            description: "Warm, spicy ginger cookies with the perfect balance of sweetness. A traditional favorite made with fresh ginger and premium spices.",
+            price: "$4.25"
+        },
+        "Cassava Crisps": {
+            description: "Light and crunchy crisps made from locally sourced cassava. A healthier alternative to potato chips with a unique earthy flavor.",
+            price: "$3.75"
+        },
+        "Cocoyam Crisps": {
+            description: "Distinctively flavored crisps made from cocoyam. These crunchy treats offer a taste of traditional African cuisine in a convenient snack form.",
+            price: "$3.75"
+        },
+        "Plantain Crisps": {
+            description: "Sweet and savory crisps made from ripe plantains. These golden crisps offer a perfect balance of natural sweetness and crispy texture.",
+            price: "$3.75"
+        },
+        "Rock Buns": {
+            description: "Traditional rock buns with dried fruits and a hint of spice. These hearty treats are perfect with a cup of tea or coffee.",
+            price: "Depending on your order"
+        },
+        "Samosas": {
+            description: "Triangular pastries filled with spiced vegetables or meat. Our samosas are crispy on the outside with a deliciously flavorful filling.",
+            price: "Depending on your order"
+        },
+        "Meat/Fish Pies": {
+            description: "Savory pies with a flaky pastry crust filled with seasoned meat or fish. A satisfying meal on the go with authentic homemade taste.",
+            price: "Depending on your order"
+        },
+        "Doughnuts": {
+            description: "Soft, fluffy doughnuts available in various flavors. Each doughnut is freshly baked and finished with your choice of glaze or topping.",
+            price: "Depending on your order"
+        },
+        "Cupcakes": {
+            description: "Beautifully decorated cupcakes in assorted flavors. Perfect for parties or as a sweet treat any time of day.",
+            price: "Depeding on your order"
+        }
+    };
+
+    // Add click event to all product cards
     document.querySelectorAll('.product-card').forEach(product => {
-        product.addEventListener('click', function () {
-            const id = this.dataset.id;
-            const name = this.querySelector('h3') ? this.querySelector('h3').innerText : "Unknown Product";
-            const description = this.querySelector('p') ? this.querySelector('p').innerText : "No description available.";
-            const price = this.querySelector('.price') ? this.querySelector('.price').innerText : "$0.00";
-            const image = this.querySelector('img') ? this.querySelector('img').src : "";
+        product.addEventListener('click', function() {
+            const productName = this.querySelector('h3').innerText;
+            const productImage = this.querySelector('img').src;
+            
 
-            // Store selected product details
-            selectedProduct = { id, name, description, price, image };
 
-            // Populate modal
-            productModalImage.src = image;
-            productModalName.innerText = name;
-            productModalDescription.innerText = description;
-            productModalPrice.innerText = price;
+            
+            // Get product data from our dictionary
+            const data = productData[productName] || {
+                description: "Details coming soon. Contact us for more information about this product.",
+                price: "Price available on request"
+            };
 
-            // Show modal
+            // Populate modal with product details
+            productModalImage.src = productImage;
+            productModalName.innerText = productName;
+            productModalDescription.innerText = data.description;
+            productModalPrice.innerText = data.price;
+
+            // Display the modal
             productModal.style.display = 'flex';
         });
     });
 
-    // Close the modal
-    closeProductModal.addEventListener('click', function () {
-        productModal.style.display = 'none';
-    });
-
-    // Add product to cart from modal
-    addToCartModalBtn.addEventListener('click', function () {
-        addToCart(selectedProduct.id, selectedProduct.name, parseFloat(selectedProduct.price.replace('$', '')), selectedProduct.image);
+    // Close the product modal when clicking the X
+    closeProductModal.addEventListener('click', function() {
         productModal.style.display = 'none';
     });
 
     // Close modal when clicking outside
-    window.addEventListener('click', function (event) {
+    window.addEventListener('click', function(event) {
         if (event.target === productModal) {
             productModal.style.display = 'none';
         }
     });
 });
+
+
+    
