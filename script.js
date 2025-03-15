@@ -348,3 +348,56 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const productModal = document.getElementById('product-modal');
+    const closeProductModal = document.querySelector('.close-product-modal');
+    const productModalImage = document.getElementById('product-modal-image');
+    const productModalName = document.getElementById('product-modal-name');
+    const productModalDescription = document.getElementById('product-modal-description');
+    const productModalPrice = document.getElementById('product-modal-price');
+    const addToCartModalBtn = document.getElementById('add-to-cart-modal');
+    let selectedProduct = {};
+
+    // Open modal when clicking on a product
+    document.querySelectorAll('.product-card').forEach(product => {
+        product.addEventListener('click', function () {
+            const id = this.dataset.id;
+            const name = this.querySelector('h3') ? this.querySelector('h3').innerText : "Unknown Product";
+            const description = this.querySelector('p') ? this.querySelector('p').innerText : "No description available.";
+            const price = this.querySelector('.price') ? this.querySelector('.price').innerText : "$0.00";
+            const image = this.querySelector('img') ? this.querySelector('img').src : "";
+
+            // Store selected product details
+            selectedProduct = { id, name, description, price, image };
+
+            // Populate modal
+            productModalImage.src = image;
+            productModalName.innerText = name;
+            productModalDescription.innerText = description;
+            productModalPrice.innerText = price;
+
+            // Show modal
+            productModal.style.display = 'flex';
+        });
+    });
+
+    // Close the modal
+    closeProductModal.addEventListener('click', function () {
+        productModal.style.display = 'none';
+    });
+
+    // Add product to cart from modal
+    addToCartModalBtn.addEventListener('click', function () {
+        addToCart(selectedProduct.id, selectedProduct.name, parseFloat(selectedProduct.price.replace('$', '')), selectedProduct.image);
+        productModal.style.display = 'none';
+    });
+
+    // Close modal when clicking outside
+    window.addEventListener('click', function (event) {
+        if (event.target === productModal) {
+            productModal.style.display = 'none';
+        }
+    });
+});

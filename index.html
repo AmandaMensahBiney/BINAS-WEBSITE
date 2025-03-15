@@ -22,12 +22,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#shop">Shop</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li>
-                    <a href="#cart" class="cart-icon">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span class="cart-count">0</span>
-                    </a>
-                </li>
+                
             </ul>
         </nav>
     </header>
@@ -37,55 +32,29 @@
         <div class="hero-content">
             <h1>Delicious Treats for Every Occasion</h1>
             <p>Handcrafted cakes, pastries, and savory delights made with love</p>
-            <a href="#shop" class="cta-button">Order Now</a>
+            <a href="#shop" class="cta-button">See Products</a>
         </div>
     </section>
 
-    <!-- Featured Products Section -->
-    <section class="featured">
-        <h2>Customer Favorites</h2>
-        <div class="product-grid">
-            <div class="product-card" data-id="p1">
-                <div class="product-image">
-                    <img src="images/birthday cake-min.jpg" alt="Cakes">
-                </div>
-                
-                <p>Rich, moist cakes for all occasions</p>
-                <p class="price">$35.99</p>
-                <button class="add-to-cart" data-id="p1" data-name="Cakes" data-price="35.99">Add to Cart</button>
-            </div>
-            <div class="product-card" data-id="p2">
-                <div class="product-image">
-                    <img src="images/Baked-dougnut.jpg" alt=" Doughnuts">
-                </div>
-               
-                <p>Classic baked doughnuts, box of 6</p>
-                <p class="price">$12.99</p>
-                <button class="add-to-cart" data-id="p2" data-name=" Doughnuts" data-price="12.99">Add to Cart</button>
-            </div>
-            <div class="product-card" data-id="p3">
-                <div class="product-image">
-                    <img src="images/hq720 (1).jpg" alt="Meat/Fish Turnovers">
-                </div>
-               
-                <p>Savory Meat/Fish Turnovers</p>
-                <p class="price">$18.99</p>
-                <button class="add-to-cart" data-id="p3" data-name="Meat/Fish Turnovers" data-price="18.99">Add to Cart</button>
-            </div>
+   
 
-            <div class="product-card" data-id="p3">
-                <div class="product-image">
-                    <img src="images/07be9fd503177e7fa01c028335cd0bb7.jpg" alt="Samosas">
-                </div>
-               
-                <p>Golden, Crunchy Samosas  </p>
-                <p class="price">$18.99</p>
-                <button class="add-to-cart" data-id="p3" data-name="Samosas" data-price="18.99">Add to Cart</button>
-            </div>
+<!-- Product Details Modal -->
+<div id="product-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-product-modal">&times;</span>
+        <img id="product-modal-image" src="" alt="Product Image">
+        <h2 id="product-modal-name"></h2>
+        <p id="product-modal-description">
+        
+        </p>
+        <p class="price"><strong>Price:</strong> <span id="product-modal-price"></span></p>
+        
+    </div>
+</div>
 
 
-        </div>
-    </section>
+
+
 
     <!-- About Section -->
     <section id="about" class="about">
@@ -103,37 +72,34 @@
         </div>
     </section>
 
+
+
+
     <!-- Shop Section -->
     <section id="shop" class="shop">
-        <h2>Our Products</h2>
+        <h2>Some Featured Products</h2>
         
-        <div class="category-filter">
-            <button class="filter-btn active" data-category="all">All</button>
-            <button class="filter-btn" data-category="cakes">Cakes</button>
-            <button class="filter-btn" data-category="pastries">Pastries</button>
-            <button class="filter-btn" data-category="savory">Savory</button>
-            <button class="filter-btn" data-category="cookies">Cookies</button>
-            <button class="filter-btn" data-category="crisps">Crisps</button>
-        </div>
-        
+
         <div class="product-grid" id="shop-products">
             <!-- Sample products - these would typically be loaded dynamically -->
             <div class="product-card" data-id="p4" data-category="cakes">
                 <div class="product-image">
-                    <img src="images/product1.jpg" alt=" Birthday Cakes">
+                    <img src="images/product1.jpg" alt="Cakes">
                 </div>
-                <h3>Birthday Cakes</h3>
-                <p class="price">$45.99</p>
-                <button class="add-to-cart" data-id="p4" data-name="Birthday Cakes" data-price="45.99">Add to Cart</button>
+                <h3>Cakes</h3>
+               
+                
             </div>
+
+            
             <div class="product-card" data-id="p5" data-category="pastries">
                 <div class="product-image">
                     <img src="images/hq720.jpg" alt="Garlic Flour Chips">
                 </div>
                 <h3>Garlic Flour Chips</h3>
 
-                <p class="price">$8.99</p>
-                <button class="add-to-cart" data-id="p5" data-name="Garlic Flour Chips" data-price="8.99">Add to Cart</button>
+                
+
             </div>
 
             <div class="product-card" data-id="p6" data-category="savory">
@@ -141,74 +107,54 @@
                     <img src="images/k_Photo_Recipe Ramp Up_2022-01-Spring-Rolls_Vegetarian_Spring_Rolls-2.jpeg" alt="Spring Rolls">
                 </div>
                 <h3>Spring Rolls</h3>
-                <p class="price">$22.99</p>
-                <button class="add-to-cart" data-id="p6" data-name="Spring Rolls" data-price="22.99">Add to Cart</button>
+                
             </div>
+
 
 
             <div class="product-card" data-id="p7" data-category="cookies">
                 <div class="product-image">
-                    <img src="images/WhatsApp Image 2025-02-08 at 17.51.15_44ba6e2e.jpg" alt="Ginger Cookies (50g)">
+                    <img src="images/WhatsApp Image 2025-02-08 at 17.51.08_238590ae.jpg" alt="Ginger Cookies">
                 </div>
-                <h3>Ginger Cookies (50g)</h3>
-                <p class="price">$22.99</p>
-                <button class="add-to-cart" data-id="p6" data-name="Ginger Cookies (50g)" data-price="22.99">Add to Cart</button>
-            </div>
-
-            <div class="product-card" data-id="p7" data-category="cookies">
-                <div class="product-image">
-                    <img src="images/WhatsApp Image 2025-02-08 at 17.51.08_238590ae.jpg" alt="Ginger Cookies (250g)">
-                </div>
-                <h3>Ginger Cookies (250g)</h3>
-                <p class="price">$22.99</p>
-                <button class="add-to-cart" data-id="p6" data-name="Ginger Cookies (250g)" data-price="22.99">Add to Cart</button>
+                <h3>Ginger Cookies </h3>
+                
+                
             </div>
 
             <div class="product-card" data-id="p8" data-category="crisps">
                 <div class="product-image">
-                    <img src="images/WhatsApp Image 2025-02-08 at 17.51.14_b77859e8.jpg" alt="Cassava Crisps (1.1kg)">
+                    <img src="images/WhatsApp Image 2025-02-08 at 17.51.14_b77859e8.jpg" alt="Cassava Crisps">
                 </div>
-                <h3>Cassava Crisps (1.1kg)</h3>
-                <p class="price">$22.99</p>
-                <button class="add-to-cart" data-id="p6" data-name="Cassava Crisps (1.1kg)" data-price="22.99">Add to Cart</button>
+                <h3>Cassava Crisps</h3>
+                
+                
             </div>
 
             <div class="product-card" data-id="p8" data-category="crisps">
                 <div class="product-image">
-                    <img src="images/WhatsApp Image 2025-02-08 at 17.51.14_8ffdf687.jpg" alt="Cocoyam Crisps (1.1kg)">
+                    <img src="images/WhatsApp Image 2025-02-08 at 17.51.14_8ffdf687.jpg" alt="Cocoyam Crisps">
                 </div>
-                <h3>Cocoyam Crisps (1.1kg)</h3>
-                <p class="price">$22.99</p>
-                <button class="add-to-cart" data-id="p6" data-name="Cocoyam Crisps (1.1kg)" data-price="22.99">Add to Cart</button>
+                <h3>Cocoyam Crisps</h3>
+               
+                
             </div>
 
             <div class="product-card" data-id="p8" data-category="crisps">
                 <div class="product-image">
-                    <img src="images/WhatsApp Image 2025-02-08 at 17.51.11_567dcd07.jpg" alt="Plantain Crisps (100g)">
+                    <img src="images/WhatsApp Image 2025-02-08 at 17.51.11_567dcd07.jpg" alt="Plantain Crisps">
                 </div>
-                <h3>Plantain Crisps (100g)</h3>
-                <p class="price">$22.99</p>
-                <button class="add-to-cart" data-id="p6" data-name="Plantain Crisps (100g)" data-price="22.99">Add to Cart</button>
+                <h3>Plantain Crisps</h3>
+                
+                
             </div>
 
-
-            <div class="product-card" data-id="p8" data-category="crisps">
-                <div class="product-image">
-                    <img src="images/WhatsApp Image 2025-02-08 at 17.51.12_f56f104f.jpg" alt="Plantain Crisps (50g)">
-                </div>
-                <h3>Plantain Crisps (50g)</h3>
-                <p class="price">$22.99</p>
-                <button class="add-to-cart" data-id="p6" data-name="Plantain Crisps (50g)" data-price="22.99">Add to Cart</button>
-            </div>
 
             <div class="product-card" data-id="p5" data-category="pastries">
                 <div class="product-image">
                     <img src="images/Rock-cakes-.jpg" alt="Rock Buns">
                 </div>
                 <h3> Rock Buns</h3>
-
-                <p class="price">$8.99</p>
-                <button class="add-to-cart" data-id="p5" data-name="Rock Buns" data-price="8.99">Add to Cart</button>
+                
             </div>
 
 
@@ -217,20 +163,38 @@
                     <img src="images/mutton-samoosas.jpg" alt="Samosas">
                 </div>
                 <h3>Samosas</h3>
-                <p class="price">$22.99</p>
-                <button class="add-to-cart" data-id="p6" data-name="Samosas" data-price="22.99">Add to Cart</button>
+                
+               
             </div>
 
 
             <div class="product-card" data-id="p5" data-category="pastries">
                 <div class="product-image">
-                    <img src="images/b69e235ae331387d46172016be77f9fd.jpg" alt="Meat/Fish Pies">
+                    <img src="images/k2re1d6dh3p51.jpg" alt="Meat/Fish Pies">
                 </div>
                 <h3>Meat/Fish Pies</h3>
 
-                <p class="price">$8.99</p>
-                <button class="add-to-cart" data-id="p5" data-name="Meat/Fish Pies" data-price="8.99">Add to Cart</button>
+               
+                
             </div>
+
+            <div class="product-card" data-id="p5" data-category="pastries">
+                <div class="product-image">
+                    <img src="images/Baked-dougnut.jpg" alt="Doughnuts">
+                </div>
+                <h3>Doughnuts</h3>
+            </div>
+
+            <div class="product-card" data-id="p5" data-category="pastries">
+                <div class="product-image">
+                    <img src="images/157877-vanilla-cupcakes-ddmfs-4X3-0397-59653731be1d4769969698e427d7f5bc.jpg" alt="Cupcakes">
+                </div>
+                <h3>Cupcakes</h3>
+            </div>
+
+
+
+
 
 
         </div>
