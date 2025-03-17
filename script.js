@@ -18,24 +18,177 @@ document.addEventListener('DOMContentLoaded', function() {
     const shopProducts = document.getElementById('shop-products');
     const filterBtns = document.querySelectorAll('.filter-btn');
     
+    // Product modal variables
+    const productModal = document.getElementById('product-modal');
+    const closeProductModal = document.querySelector('.close-product-modal');
+    const productModalImage = document.getElementById('product-modal-image');
+    const productModalName = document.getElementById('product-modal-name');
+    const productModalDescription = document.getElementById('product-modal-description');
+    const productModalPrice = document.getElementById('product-modal-price');
+    
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     
+    // Product data - add your descriptions and prices here
+    const productData = {
+        "Cakes": {
+            description: "Delicious homemade cakes for all occasions. Our cakes are baked with the finest ingredients, ensuring rich flavor and perfect texture with every bite!",
+            price: "Depending on your order"
+        },
+        "Garlic Flour Chips": {
+            description: "Crispy, savory garlic-flavored chips made from premium flour. A perfect snack for any time of day with just the right amount of garlic flavor!",
+            price: "Depending on your order"
+        },
+        "Vegetable Spring Rolls": {
+            description: "Fresh vegetable spring rolls with a crispy outer layer! (Discount available for bulk purchase)",
+            price: "Ghc 20 for 3 pieces"
+        },
+        "Ginger Cookies": {
+            description: "Warm, gluten-free ginger cookies with the perfect balance of sweetness using only honey. Available in chocolate ginger, coffee ginger and peanut butter ginger flavours!",
+            price: "Ghc 10 for 50g, Ghc 30 for 250g"
+        },
+        "Cassava Crisps": {
+            description: "Light and crunchy crisps made from locally sourced cassava. A healthier alternative to potato chips with a unique earthy flavor!",
+            price: "Ghc 15 for 75g, ghc 30 for 250g, Ghc 150 for 800g"
+        },
+        "Cocoyam Crisps": {
+            description: "Distinctively flavored crisps made from cocoyam. These crunchy treats offer a taste of traditional African cuisine in a convenient snack form!",
+            price: "Ghc 15 for 75g, Ghc 30 for 250g, Ghc 150 for 800g"
+        },
+        "Plantain Crisps": {
+            description: "Sweet and savory crisps made from plantains. These golden crisps offer a perfect balance of natural sweetness and crispy texture!",
+            price: "Ghc 15 for 100g(ripe/unripe), Ghc 50 for 300g(Spicy ripe), Ghc 45 for 300g(unripe), Ghc 130 for 1kg(ripe), Ghc 120 for 1kg(unripe), Ghc 130 for 1kg(spicy ripe)"
+        },
+        "Fruit Scoans": {
+            description: "Traditional scoans with dried fruits and a hint of spice. These hearty treats are perfect with a cup of tea or coffee!",
+            price: "Ghc 12.50 for a piece"
+        },
+
+        "Peanut Butter Scoans": {
+            description: "Golden, crumbly delight, infused with the rich, nutty flavor of creamy peanut butter. Each bite offers a buttery, tender texture with just the right balance of sweetness, making them an irresistible treat for any time of day!",
+            price: "Ghc 10 for a piece"
+        },
+
+        "Jam Scoans": {
+            description: "Baked to perfection with a light, flaky texture that melts in your mouth. Each bite is a sweet and fruity indulgence, with rich, luscious jam adding the perfect burst of flavor!",
+            price: "Ghc 10 for a piece"
+        },
+
+
+        "Plain Scoans": {
+            description: "Classic, buttery delight, baked to perfection with a light, fluffy interior and a golden, slightly crisp exterior. Whether enjoyed on their own or paired with a warm cup of tea, these scones are a timeless treat that never goes out of style!!",
+            price: "Ghc 10 for a piece"
+        },
+
+
+
+        "Vegetable Samosas": {
+            description: "Triangular pastries filled with colourful vegetables. Our vegetable samosas are crispy on the outside with a deliciously flavorful filling! (Discount available for bulk purchase)",
+            price: "Ghc 20 for 3 pieces"
+        },
+        "Meat Pies": {
+            description: "Savory pies with a flaky pastry crust filled with seasoned meat and vegetables. A satisfying meal on the go with authentic homemade taste!",
+            price: "Ghc 20 for a piece"
+        },
+
+"Fish Pies": {
+            description: " Filled with a savory, well-seasoned fish filling and vegetables that is rich, tender, and packed with flavor. The buttery, crisp pastry perfectly complements the moist and flavorful seafood inside!",
+            price: "Ghc 20 for a piece"
+        },
+
+"Chicken Pies": {
+            description: "Well-seasoned chicken filling that is tender, juicy, and packed with flavor. The buttery, crisp pastry perfectly complements the rich and hearty filling!",
+            price: "Ghc 20 for a piece"
+        },
+
+"Vegetable Pies": {
+            description: "A savory blend of fresh, seasoned vegetables that are rich in flavor and perfectly cooked to tenderness!",
+            price: "Ghc 20 for a piece"
+        },
+
+        "Plain <br> Doughnuts": {
+            description: "Soft, fluffy delight, with a golden, slightly crisp exterior and a light, airy interior that melts in your mouth. Their simple yet rich flavor makes them perfect for enjoying on their own or paired with a warm cup of coffee or tea!",
+            price: "Depending on your order"
+        },
+
+        "Cream-Filled <br> Doughnuts": {
+            description: "A heavenly delight that gives way to a rich, velvety cream filling with every bite. The perfect balance of light, airy dough and smooth, luscious cream makes them an irresistible indulgence!",
+            price: "Depending on your order"
+        },
+
+        "Chocolate-Filled Doughnuts": {
+            description: " A decadent delight, with a soft, fluffy exterior that gives way to a rich, gooey chocolate center with every bite.!",
+            price: "Depending on your order"
+        },
+
+        "Jam-Filled <br> Doughnuts": {
+            description: "A sweet, fruity delight that bursts with rich, tangy jam in every bite. The perfect balance of light, fluffy dough and luscious, flavorful filling makes them an irresistible treat!",
+            price: "Depending on your order"
+        },
+
+
+        "Beef Spring Rolls": {
+            description: " Crispy, golden delight packed with flavorful, well-seasoned beef and fresh vegetables, all wrapped in a light, crunchy shell. Perfect as an appetizer or snack, they offer a satisfying balance of crunch and juiciness in every bite! (Discount available for bulk purchase)",
+            price: "Ghc 20 for 3 pieces"
+        },
+
+        "Beef Samosas": {
+            description: "Perfectly crispy and golden delight, filled with savory, spiced beef that’s rich in flavor and perfectly seasoned with aromatic herbs and spices. Each bite delivers a crunchy, flaky exterior that gives way to a juicy, flavorful filling! (Discount available for bulk purchase)",
+            price: "Ghc 20 for 3 pieces"
+        },
+
+        "Chicken Spring Rolls": {
+            description: "Filled with tender, seasoned chicken and fresh vegetables, all wrapped in a light, crunchy shell. Each bite bursts with a perfect balance of savory flavors and satisfying crunch!",
+            price: "Ghc 20 for 3 pieces (Discount available for bulk purchase)"
+        },
+
+
+        "Chicken Samosas": {
+            description: "Crispy on the outside, juicy and flavorful on the inside – our Chicken Samosas are the perfect blend of golden perfection and mouthwatering spices. One bite, and you'll be craving more! (Discount available for bulk purchase)",
+            price: "Ghc 20 for 3 pieces"
+        },
+
+        "Cheese Spring Rolls": {
+            description: "Golden, crispy perfection meets rich, melty goodness—our Cheese Spring Rolls are the ultimate indulgence! Each bite is a delightful blend of crunch and gooey, cheesy satisfaction. A treat you won’t resist! (Discount available for bulk purchase)",
+            price: "Ghc 25 for 3 pieces"
+        },
+
+        "Cheese Samosas": {
+            description: "Stuffed with a rich, velvety cheese filling that melts in your mouth with every bite. The flaky, crunchy pastry perfectly complements the creamy, savory goodness inside, creating an irresistible contrast of textures! (Discount available for bulk purchase)",
+            price: "Ghc 25 for 3 pieces"
+        },
+
+        "Cupcakes": {
+            description: "Beautifully decorated cupcakes in assorted flavors. Perfect for parties or as a sweet treat any time of day!",
+            price: "Ghc 25 for 3 pieces"
+        },
+    
+
+
+
+    };
+    
     // Toggle mobile menu
-    menuToggle.addEventListener('click', function() {
-        navLinks.classList.toggle('active');
-    });
+    if (menuToggle) {
+        menuToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+        });
+    }
     
     // Open cart modal
-    cartIcon.addEventListener('click', function(e) {
-        e.preventDefault();
-        updateCartDisplay();
-        cartModal.style.display = 'flex';
-    });
+    if (cartIcon) {
+        cartIcon.addEventListener('click', function(e) {
+            e.preventDefault();
+            updateCartDisplay();
+            cartModal.style.display = 'flex';
+        });
+    }
     
     // Close cart modal
-    closeModal.addEventListener('click', function() {
-        cartModal.style.display = 'none';
-    });
+    if (closeModal) {
+        closeModal.addEventListener('click', function() {
+            cartModal.style.display = 'none';
+        });
+    }
     
     // Close modals when clicking outside
     window.addEventListener('click', function(event) {
@@ -45,6 +198,8 @@ document.addEventListener('DOMContentLoaded', function() {
             checkoutModal.style.display = 'none';
         } else if (event.target === confirmationModal) {
             confirmationModal.style.display = 'none';
+        } else if (event.target === productModal) {
+            productModal.style.display = 'none';
         }
     });
     
@@ -324,10 +479,6 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.setItem('cart', JSON.stringify(cart));
     }
     
-    // Initialize
-    updateCartDisplay();
-    updateCartCounter();
-    
     // Contact form submission
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
@@ -347,110 +498,67 @@ document.addEventListener('DOMContentLoaded', function() {
             newsletterForm.reset();
         });
     }
-});
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    const productModal = document.getElementById('product-modal');
-    const closeProductModal = document.querySelector('.close-product-modal');
-    const productModalImage = document.getElementById('product-modal-image');
-    const productModalName = document.getElementById('product-modal-name');
-    const productModalDescription = document.getElementById('product-modal-description');
-    const productModalPrice = document.getElementById('product-modal-price');
-
-
     
-    // Product data - add your descriptions and prices here
-    const productData = {
-        "Cakes": {
-            description: "Delicious homemade cakes for all occasions. Our cakes are baked with the finest ingredients, ensuring rich flavor and perfect texture with every bite.",
-            price: "Depending on your order"
-        },
-        "Garlic Flour Chips": {
-            description: "Crispy, savory garlic-flavored chips made from premium flour. A perfect snack for any time of day with just the right amount of garlic flavor.",
-            price: "Depending on your order"
-        },
-        "Spring Rolls": {
-            description: "Fresh vegetable spring rolls with a crispy outer layer. Served with our special dipping sauce that complements the flavors perfectly.",
-            price: "Depending on your order"
-        
-        },
-        "Ginger Cookies": {
-            description: "Warm, spicy ginger cookies with the perfect balance of sweetness. A traditional favorite made with fresh ginger and premium spices.",
-            price: "$4.25"
-        },
-        "Cassava Crisps": {
-            description: "Light and crunchy crisps made from locally sourced cassava. A healthier alternative to potato chips with a unique earthy flavor.",
-            price: "$3.75"
-        },
-        "Cocoyam Crisps": {
-            description: "Distinctively flavored crisps made from cocoyam. These crunchy treats offer a taste of traditional African cuisine in a convenient snack form.",
-            price: "$3.75"
-        },
-        "Plantain Crisps": {
-            description: "Sweet and savory crisps made from ripe plantains. These golden crisps offer a perfect balance of natural sweetness and crispy texture.",
-            price: "$3.75"
-        },
-        "Rock Buns": {
-            description: "Traditional rock buns with dried fruits and a hint of spice. These hearty treats are perfect with a cup of tea or coffee.",
-            price: "Depending on your order"
-        },
-        "Samosas": {
-            description: "Triangular pastries filled with spiced vegetables or meat. Our samosas are crispy on the outside with a deliciously flavorful filling.",
-            price: "Depending on your order"
-        },
-        "Meat/Fish Pies": {
-            description: "Savory pies with a flaky pastry crust filled with seasoned meat or fish. A satisfying meal on the go with authentic homemade taste.",
-            price: "Depending on your order"
-        },
-        "Doughnuts": {
-            description: "Soft, fluffy doughnuts available in various flavors. Each doughnut is freshly baked and finished with your choice of glaze or topping.",
-            price: "Depending on your order"
-        },
-        "Cupcakes": {
-            description: "Beautifully decorated cupcakes in assorted flavors. Perfect for parties or as a sweet treat any time of day.",
-            price: "Depeding on your order"
-        }
-    };
-
-    // Add click event to all product cards
+    // Product modal functionality
+    if (closeProductModal) {
+        closeProductModal.addEventListener('click', function() {
+            productModal.style.display = 'none';
+        });
+    }
+    
+    // Product details functionality - Consolidated into a single approach
+    // Method 1: Click on product card to show details
     document.querySelectorAll('.product-card').forEach(product => {
-        product.addEventListener('click', function() {
-            const productName = this.querySelector('h3').innerText;
-            const productImage = this.querySelector('img').src;
+        product.addEventListener('click', function(e) {
+            // Don't trigger if clicking on an add-to-cart button
+            if (e.target.classList.contains('add-to-cart') || e.target.closest('.add-to-cart')) {
+                return;
+            }
             
-
-
-            
-            // Get product data from our dictionary
-            const data = productData[productName] || {
-                description: "Details coming soon. Contact us for more information about this product.",
-                price: "Price available on request"
-            };
-
-            // Populate modal with product details
-            productModalImage.src = productImage;
-            productModalName.innerText = productName;
-            productModalDescription.innerText = data.description;
-            productModalPrice.innerText = data.price;
-
-            // Display the modal
-            productModal.style.display = 'flex';
+            showProductDetails(this);
         });
     });
-
-    // Close the product modal when clicking the X
-    closeProductModal.addEventListener('click', function() {
-        productModal.style.display = 'none';
-    });
-
-    // Close modal when clicking outside
-    window.addEventListener('click', function(event) {
-        if (event.target === productModal) {
-            productModal.style.display = 'none';
+    
+    // Method 2: Click on view details link
+    document.addEventListener('click', function(event) {
+        if (event.target.matches('.view-details-link') || event.target.closest('.view-details-link') || 
+            event.target.matches('.product-details-link') || event.target.closest('.product-details-link')) {
+            event.preventDefault();
+            
+            // Get the product card that contains this link
+            const productCard = event.target.closest('.product-card');
+            if (productCard) {
+                showProductDetails(productCard);
+            }
         }
     });
+    
+    // Function to show product details in modal
+    function showProductDetails(productCard) {
+        const productName = productCard.querySelector('h3').innerText;
+        const productImage = productCard.querySelector('img').src;
+        
+        // Get product data from our dictionary
+        const data = productData[productName] || {
+            description: "Details coming soon. Contact us for more information about this product.",
+            price: "Price available on request"
+        };
+
+        // Populate modal with product details
+        if (productModalImage) productModalImage.src = productImage;
+        if (productModalName) productModalName.innerText = productName;
+        if (productModalDescription) productModalDescription.innerText = data.description;
+        if (productModalPrice) productModalPrice.innerText = data.price;
+
+        // Display the modal
+        if (productModal) productModal.style.display = 'flex';
+    }
+    
+    // Initialize
+    updateCartDisplay();
+    updateCartCounter();
 });
 
 
-    
+
+

@@ -10,8 +10,8 @@
 <body>
     <header>
         <div class="logo">
-            <h1>Binas Prime</h1>
-            <p>Catering Enterprise</p>
+            <h1>Binas <span class="Prime">Prime</span></h1>
+            <h3>Catering Enterprise</h3>
         </div>
         <nav>
             <div class="menu-toggle">
@@ -79,6 +79,15 @@
     <section id="shop" class="shop">
         <h2>Some Of Our Products</h2>
         
+        <div class="category-filter">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="cakes">Cakes</button>
+            <button class="filter-btn" data-category="pastries">Pastries</button>
+            <button class="filter-btn" data-category="savory">Savory</button>
+        </div>
+
+
+
 
         <div class="product-grid" id="shop-products">
             <!-- Sample products - these would typically be loaded dynamically -->
@@ -87,7 +96,8 @@
                     <img src="images/product1.jpg" alt="Cakes">
                 </div>
                 <h3>Cakes</h3>
-                <a href="#" class="product-details-link">View Details</a>
+                <button class="product-details-button">View Details</button>
+
                
                 
             </div>
@@ -98,17 +108,19 @@
                     <img src="images/hq720.jpg" alt="Garlic Flour Chips">
                 </div>
                 <h3>Garlic Flour Chips</h3>
-                <a href="#" class="product-details-link">View Details</a>
+                <button class="product-details-button">View Details</button>
+
                 
 
             </div>
 
             <div class="product-card" data-id="p6" data-category="savory">
                 <div class="product-image">
-                    <img src="images/k_Photo_Recipe Ramp Up_2022-01-Spring-Rolls_Vegetarian_Spring_Rolls-2.jpeg" alt="Spring Rolls">
+                    <img src="images/k_Photo_Recipe Ramp Up_2022-01-Spring-Rolls_Vegetarian_Spring_Rolls-2.jpeg" alt="Vegetable Spring Rolls">
                 </div>
-                <h3>Spring Rolls</h3>
-                <a href="#" class="product-details-link">View Details</a>
+                <h3>Vegetable Spring Rolls</h3>
+                <button class="product-details-button">View Details</button>
+
 
 
             </div>
@@ -120,7 +132,8 @@
                     <img src="images/WhatsApp Image 2025-02-08 at 17.51.08_238590ae.jpg" alt="Ginger Cookies">
                 </div>
                 <h3>Ginger Cookies </h3>
-                <a href="#" class="product-details-link">View Details</a>
+                <button class="product-details-button">View Details</button>
+
                 
             </div>
 
@@ -129,7 +142,8 @@
                     <img src="images/WhatsApp Image 2025-02-08 at 17.51.14_b77859e8.jpg" alt="Cassava Crisps">
                 </div>
                 <h3>Cassava Crisps</h3>
-                <a href="#" class="product-details-link">View Details</a>
+                <button class="product-details-button">View Details</button>
+
                 
             </div>
 
@@ -138,7 +152,8 @@
                     <img src="images/WhatsApp Image 2025-02-08 at 17.51.14_8ffdf687.jpg" alt="Cocoyam Crisps">
                 </div>
                 <h3>Cocoyam Crisps</h3>
-                <a href="#" class="product-details-link">View Details</a>
+                <button class="product-details-button">View Details</button>
+
                 
             </div>
 
@@ -147,58 +162,204 @@
                     <img src="images/WhatsApp Image 2025-02-08 at 17.51.11_567dcd07.jpg" alt="Plantain Crisps">
                 </div>
                 <h3>Plantain Crisps</h3>
-                <a href="#" class="product-details-link">View Details</a>
+                <button class="product-details-button">View Details</button>
+
                 
             </div>
 
 
             <div class="product-card" data-id="p5" data-category="pastries">
                 <div class="product-image">
-                    <img src="images/Rock-cakes-.jpg" alt="Rock Buns">
+                    <img src="images/Rock-cakes-.jpg" alt="Fruit Scoans">
                 </div>
-                <h3> Rock Buns</h3>
-                <a href="#" class="product-details-link">View Details</a>
+                <h3> Fruit Scoans</h3>
+                <button class="product-details-button">View Details</button>
+
+            </div>
+
+            <div class="product-card" data-id="p5" data-category="pastries">
+                <div class="product-image">
+                    <img src="images/peanut butter scones.jpg" alt="Peanut Butter Scoans">
+                </div>
+                <h3> Peanut Butter Scoans</h3>
+                <button class="product-details-button">View Details</button>
+
+            </div>
+
+            <div class="product-card" data-id="p5" data-category="pastries">
+                <div class="product-image">
+                    <img src="images/jam-bellied-scones-featured.jpg" alt="Jam Scoans">
+                </div>
+                <h3> Jam Scoans</h3>
+                <button class="product-details-button">View Details</button>
+
+            </div>
+
+            <div class="product-card" data-id="p5" data-category="pastries">
+                <div class="product-image">
+                    <img src="images/plain scones.jpg" alt="Plain Scoans">
+                </div>
+                <h3>Plain Scoans</h3>
+                <button class="product-details-button">View Details</button>
+
+            </div>
+
+
+
+
+            <div class="product-card" data-id="p6" data-category="savory">
+                <div class="product-image">
+                    <img src="images/vegetable samosa.jpg" alt="Vegetable Samosas">
+                </div>
+                <h3>Vegetable Samosas</h3>
+                <button class="product-details-button">View Details</button>
+
+               
+            </div>
+
+
+            <div class="product-card" data-id="p5" data-category="pastries">
+                <div class="product-image">
+                    <img src="images/k2re1d6dh3p51.jpg" alt="Meat Pies">
+                </div>
+                <h3>Meat Pies</h3>
+                <button class="product-details-button">View Details</button>
+                
+            </div>
+
+            <div class="product-card" data-id="p5" data-category="pastries">
+                <div class="product-image">
+                    <img src="images/fish pie.jpg" alt="Fish Pies">
+                </div>
+                <h3>Fish Pies</h3>
+                <button class="product-details-button">View Details</button>
+                
+            </div>
+
+            <div class="product-card" data-id="p5" data-category="pastries">
+                <div class="product-image">
+                    <img src="images/chicken pie.jpg" alt="Chicken Pies">
+                </div>
+                <h3>Chicken Pies</h3>
+                <button class="product-details-button">View Details</button>
+                
+            </div>
+
+            <div class="product-card" data-id="p5" data-category="pastries">
+                <div class="product-image">
+                    <img src="images/vegetable pie.jpg" alt="Vegetable Pies">
+                </div>
+                <h3>Vegetable Pies</h3>
+                <button class="product-details-button">View Details</button>
+                
+            </div>
+
+
+
+            <div class="product-card" data-id="p5" data-category="pastries">
+                <div class="product-image">
+                    <img src="images/plain doughnut.jpg" alt="Plain Doughnuts">
+                </div>
+                <h3>Plain <br>Doughnuts</h3>
+                <button class="product-details-button">View Details</button>
+
+            </div>
+
+            <div class="product-card" data-id="p5" data-category="pastries">
+                <div class="product-image">
+                    <img src="images/Cream-Filled-Brioche-Donuts-Recipe.jpg" alt="Cream-Filled Doughnuts">
+                </div>
+                <h3>Cream-Filled <br>Doughnuts</h3>
+                <button class="product-details-button">View Details</button>
+
+            </div>
+
+            <div class="product-card" data-id="p5" data-category="pastries">
+                <div class="product-image">
+                    <img src="images/chocolate-filled-donuts-R093916-hero-01-3fd6b8726f9c47f386f1017af1076f01.jpg" alt="Chocolate-Filled Doughnuts">
+                </div>
+                <h3> Chocolate-Filled Doughnuts</h3>
+                <button class="product-details-button">View Details</button>
+
+            </div>
+
+
+            <div class="product-card" data-id="p5" data-category="pastries">
+                <div class="product-image">
+                    <img src="images/jelly-filled-donuts-1x1-1-5775.jpg" alt="Jam-Filled Doughnuts">
+                </div>
+                <h3>Jam-Filled <br> Doughnuts</h3>
+                <button class="product-details-button">View Details</button>
+
+            </div>
+
+
+
+
+
+            <div class="product-card" data-id="p4" data-category="cakes">
+                <div class="product-image">
+                    <img src="images/157877-vanilla-cupcakes-ddmfs-4X3-0397-59653731be1d4769969698e427d7f5bc.jpg" alt="Cupcakes">
+                </div>
+                <h3>Cupcakes</h3>
+                <button class="product-details-button">View Details</button>
+
+            </div>
+
+            <div class="product-card" data-id="p6" data-category="savory">
+                <div class="product-image">
+                    <img src="images/beef spring rolls.jpg" alt="Beef Spring Rolls">
+                </div>
+                <h3>Beef Spring Rolls</h3>
+                <button class="product-details-button">View Details</button>
+
+            </div>
+
+            <div class="product-card" data-id="p6" data-category="savory">
+                <div class="product-image">
+                    <img src="images/beef samosa.jpg" alt="Beef Samosas">
+                </div>
+                <h3>Beef Samosas</h3>
+                <button class="product-details-button">View Details</button>
+
+            </div>
+
+            <div class="product-card" data-id="p6" data-category="savory">
+                <div class="product-image">
+                    <img src="images/chicken spring roll.jpeg" alt="\Chicken Spring Rolls">
+                </div>
+                <h3>Chicken Spring Rolls</h3>
+                <button class="product-details-button">View Details</button>
+
+            </div>
+
+            <div class="product-card" data-id="p6" data-category="savory">
+                <div class="product-image">
+                    <img src="images/chicken samosa.jpg" alt="Chicken Samosas">
+                </div>
+                <h3>Chicken Samosas</h3>
+                <button class="product-details-button">View Details</button>
+
+            </div>
+
+            <div class="product-card" data-id="p6" data-category="savory">
+                <div class="product-image">
+                    <img src="images/cheese spring rolls.jpg" alt="Cheese Spring Rolls">
+                </div>
+                <h3>Cheese Spring Rolls</h3>
+                <button class="product-details-button">View Details</button>
+
             </div>
 
 
             <div class="product-card" data-id="p6" data-category="savory">
                 <div class="product-image">
-                    <img src="images/mutton-samoosas.jpg" alt="Samosas">
+                    <img src="images/cheese samosa.jpg" alt="Cheese Samosas">
                 </div>
-                <h3>Samosas</h3>
-                <a href="#" class="product-details-link">View Details</a>
-               
+                <h3>Cheese Samosas</h3>
+                <button class="product-details-button">View Details</button>
+
             </div>
-
-
-            <div class="product-card" data-id="p5" data-category="pastries">
-                <div class="product-image">
-                    <img src="images/k2re1d6dh3p51.jpg" alt="Meat/Fish Pies">
-                </div>
-                <h3>Meat/Fish Pies</h3>
-                <a href="#" class="product-details-link">View Details</a>
-               
-                
-            </div>
-
-            <div class="product-card" data-id="p5" data-category="pastries">
-                <div class="product-image">
-                    <img src="images/Baked-dougnut.jpg" alt="Doughnuts">
-                </div>
-                <h3>Doughnuts</h3>
-                <a href="#" class="product-details-link">View Details</a>
-            </div>
-
-            <div class="product-card" data-id="p5" data-category="pastries">
-                <div class="product-image">
-                    <img src="images/157877-vanilla-cupcakes-ddmfs-4X3-0397-59653731be1d4769969698e427d7f5bc.jpg" alt="Cupcakes">
-                </div>
-                <h3>Cupcakes</h3>
-                <a href="#" class="product-details-link">View Details</a>
-            </div>
-
-
-
 
 
 
@@ -211,19 +372,21 @@
         <div class="contact-container">
             <div class="contact-info">
                 <h3>Get in Touch</h3>
-                <p><i class="fas fa-map-marker-alt"></i> 123 Baker Street, Foodville</p>
-                <p><i class="fas fa-phone"></i> (555) 123-4567</p>
-                <p><i class="fas fa-envelope"></i> info@binasprimeenterprise.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> A'L91 Beetroot Street, Pantang, Accra</p>
+                <p><i class="fas fa-phone"></i> +233 20 113 7324</p>
+                <p><i class="fas fa-envelope"></i> info@binasprime.com</p>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-facebook"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="https://wa.me/233201137324" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
                 </div>
                 <div class="business-hours">
                     <h4>Business Hours</h4>
-                    <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
-                    <p>Saturday: 9:00 AM - 5:00 PM</p>
-                    <p>Sunday: Closed</p>
+                    <p>Monday - Wednesday: 6:00 AM - 6:00 PM</p>
+                    <p>Thursday-Friday: 7:00 AM - 6:00 PM</p>
+                    <p>Saturday: 8:00AM-6:00PM</p>
+                    <p>Sunday: 9:30AM-6:00PM</p>
                 </div>
             </div>
             <div class="contact-form">

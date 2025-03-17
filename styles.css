@@ -111,8 +111,8 @@ header {
 }
 
 .logo p {
-    color: var(--secondary-color);
-    font-size: 0.9rem;
+    color: #57310e;
+    font-size: 1.2rem;
 }
 
 .nav-links {
@@ -589,13 +589,16 @@ header {
 
 .social-links {
     margin: 1.5rem 0;
-    position: relative;
+    display: flex;
+    align-items: center;
+    position:relative;
     z-index: 1;
 }
 
 .social-links a {
-    display: inline-block;
-    background-color: rgba(255, 255, 255, 0.15);
+    display: flex;
+    align-items: center;
+    
     color: white;
     width: 36px;
     height: 36px;
@@ -607,7 +610,7 @@ header {
 }
 
 .social-links a:hover {
-    background-color: var(--primary-color);
+    
     transform: translateY(-3px);
 }
 
@@ -1014,7 +1017,15 @@ footer::before {
     max-width: 400px;
     text-align: center;
     position: relative;
+    color: #805b05;
+    
 }
+
+.price{
+     color: #e94f37;
+     
+}
+
 
 #product-modal img {
     width: 90%;
@@ -1046,5 +1057,9 @@ footer::before {
 .product-details-link:hover {
     color: var(--secondary-color);
     transform: translateY(-2px);
+}
+
+.Prime{
+    color: #e9b43a;
 }
 
