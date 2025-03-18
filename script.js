@@ -30,14 +30,76 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Product data - add your descriptions and prices here
     const productData = {
-        "Cakes": {
-            description: "Delicious homemade cakes for all occasions. Our cakes are baked with the finest ingredients, ensuring rich flavor and perfect texture with every bite!",
-            price: "Depending on your order"
+        "Plain Chiffon Cakes": {
+            description: " The perfect blend of light, airy texture and rich, buttery flavor. Made with the finest ingredients, our chiffon cakes are incredibly soft and moist, offering a delicate balance of sweetness.  Every bite melts in your mouth, delivering a comforting and satisfying experience! (Icing added on request)",
+            price: "Ghc 400 for 1 pound"
         },
-        "Garlic Flour Chips": {
-            description: "Crispy, savory garlic-flavored chips made from premium flour. A perfect snack for any time of day with just the right amount of garlic flavor!",
-            price: "Depending on your order"
+
+"Fruit Cakes": {
+            description: " A delightful fusion of rich, moist cake and a medley of premium dried fruits. Each bite bursts with deep, well-balanced flavors that only get better with time! (Icing added on request)",
+            price: "Ghc 400 for 1 pound"
         },
+
+        "Lemon Cakes": {
+            description: " A bright and zesty delight, bursting with the refreshing flavor of real lemons. Soft, moist, and infused with the perfect balance of tangy citrus and subtle sweetness, this cake delivers a light and airy texture that melts in your mouth! (Icing added on request)",
+            price: "Ghc 400 for 1 pound"
+        },
+
+"Banana Cakes": {
+            description: " A rich, moist, and flavorful treat made with perfectly ripe bananas for a naturally sweet and delicious taste. Soft and fluffy, with a hint of warm spices like cinnamon and nutmeg, this cake delivers a comforting homemade feel in every bite! (Icing added on request)",
+            price: "Ghc 400 for 1 pound"
+        },
+
+"Coconut Cakes": {
+            description: " Made with fresh coconut and premium ingredients, this cake offers a soft, fluffy texture with a delicate sweetness that melts in your mouth. Every bite is infused with the creamy, nutty essence of coconut, making it a perfect treat for coconut lovers! (Icing added on request)",
+            price: "Ghc 400 for 1 pound"
+        },
+
+"Vanilla Cakes": {
+            description: "  A timeless classic, loved for its soft, moist texture and rich, buttery flavor. Made with the finest vanilla, this cake delivers a delicate sweetness and a light, fluffy crumb that melts in your mouth. Simple yet elegant, this cake is a staple for celebrations, tea time, or a sweet everyday indulgence! (Icing added on request)",
+            price: "Ghc 400 for 1 pound"
+        },
+
+"Orange Chiffon Cakes": {
+            description: " A light, airy, and citrus-infused delight, bursting with the refreshing taste of fresh oranges. Its delicate, fluffy texture perfectly complements the bright, tangy flavor, creating a harmonious balance of sweetness and zest. Made with real orange juice and zest, this cake delivers a naturally fragrant and refreshing taste in every bite! (Icing added on request)",
+            price: "Ghc 400 for 1 pound"
+        },
+
+"Bandara Cakes": {
+            description: " A vibrant fusion of two citrus favorites-orange and lemon, combining the sweet, zesty notes of oranges with the tangy brightness of lemons. Soft, moist, and bursting with refreshing citrus flavor, this cake offers the perfect balance of sweetness and tartness in every bite. Made with real orange juice, lemon zest, and the finest ingredients, it delivers a light and fluffy texture that melts in your mouth! (Icing added on request)",
+            price: "Ghc 400 for 1 pound"
+        },
+
+"Carrot Cakes": {
+            description: " A moist, flavorful delight packed with freshly grated carrots, warm spices, and a hint of natural sweetness. With its soft, tender crumb and rich texture, this classic favorite is both wholesome and indulgent! (Icing added on request)",
+            price: "Ghc 400 for 1 pound"
+        },
+
+"Ginger Cakes": {
+            description: " A warm and aromatic treat rich with the bold, comforting flavor of ginger.  Its tender crumb and rich, slightly caramelized crust make it a perfect companion to tea or coffee! (Icing added on request)",
+            price: "Ghc 400 for 1 pound"
+           
+        },
+
+"Cheese Cakes": {
+            description: " The ultimate creamy and indulgent dessert featuring a rich, velvety smooth filling made from the finest cream cheese, balanced with just the right touch of sweetness. Baked to perfection on a buttery, crumbly biscuit crust, every bite melts in your mouth with a luscious, tangy flavor. Light yet satisfying, it’s the perfect way to indulge in pure dessert bliss! (Icing added on request)",
+            price: "Ghc 500 for 1 pound"
+        },
+
+
+
+        "Spiced Baked Chips": {
+            description: "The perfect balance of crunch and flavor. Made from high-quality wheat flour and baked to golden perfection, they offer a healthier alternative to fried snacks—without compromising on taste! Enjoy them as a guilt-free treat, a satisfying crunch with your favorite dips, or a light and crispy snack anytime, anywhere!",
+            price: "Ghc 150 for a bowl"
+        },
+
+"Spiced Fried Chips": {
+            description: "Experience the ultimate snack with our fried wheat flour chips—light, crispy, and packed with flavor. Made from carefully selected wheat flour and fried to golden perfection, each chip delivers an irresistible crunch that keeps you coming back for more. Whether enjoyed solo or paired with your favorite dips, these chips bring a satisfying taste that never disappoints!",
+            price: "Ghc 130 for a bowl"
+        },
+
+
+
         "Vegetable Spring Rolls": {
             description: "Fresh vegetable spring rolls with a crispy outer layer! (Discount available for bulk purchase)",
             price: "Ghc 20 for 3 pieces"
@@ -105,24 +167,24 @@ document.addEventListener('DOMContentLoaded', function() {
             price: "Ghc 20 for a piece"
         },
 
-        "Plain <br> Doughnuts": {
+        "Plain Doughnuts": {
             description: "Soft, fluffy delight, with a golden, slightly crisp exterior and a light, airy interior that melts in your mouth. Their simple yet rich flavor makes them perfect for enjoying on their own or paired with a warm cup of coffee or tea!",
-            price: "Depending on your order"
+            price: "Ghc 25 for 3 pieces"
         },
 
-        "Cream-Filled <br> Doughnuts": {
-            description: "A heavenly delight that gives way to a rich, velvety cream filling with every bite. The perfect balance of light, airy dough and smooth, luscious cream makes them an irresistible indulgence!",
-            price: "Depending on your order"
+        "Cream Doughnuts": {
+            description: " The perfect balance of light, airy dough and smooth, luscious cream makes them an irresistible indulgence!",
+            price: "Ghc 25 for 3 pieces"
         },
 
-        "Chocolate-Filled Doughnuts": {
+        "Chocolate Doughnuts": {
             description: " A decadent delight, with a soft, fluffy exterior that gives way to a rich, gooey chocolate center with every bite.!",
-            price: "Depending on your order"
+            price: "Ghc 25 for 3 pieces"
         },
 
-        "Jam-Filled <br> Doughnuts": {
-            description: "A sweet, fruity delight that bursts with rich, tangy jam in every bite. The perfect balance of light, fluffy dough and luscious, flavorful filling makes them an irresistible treat!",
-            price: "Depending on your order"
+        "Jam Doughnuts": {
+            description: "A sweet, fruity delight that bursts with rich, tangy jam in every bite. The perfect balance of light, fluffy dough and luscious, flavorful filling!",
+            price: "Ghc 25 for 3 pieces"
         },
 
 
@@ -157,11 +219,125 @@ document.addEventListener('DOMContentLoaded', function() {
             price: "Ghc 25 for 3 pieces"
         },
 
-        "Cupcakes": {
-            description: "Beautifully decorated cupcakes in assorted flavors. Perfect for parties or as a sweet treat any time of day!",
-            price: "Ghc 25 for 3 pieces"
+        "Buttercream Cupcakes": {
+            description: "The perfect combination of soft, fluffy cake and rich, creamy frosting. Baked to perfection, these cupcakes have a light and tender crumb, complemented by a smooth and velvety buttercream topping. Whether classic vanilla, chocolate, or a fun variety of flavors, our cupcakes are beautifully swirled with luscious buttercream, making them as delightful to look at as they are to eat. Perfect for birthdays, celebrations, or just a sweet indulgence, these cupcakes are a treat that brings joy in every bite!",
+            price: "Ghc 15 for a piece, Ghc 40 for 3 pieces"
         },
     
+        "Whippedcream Cupcakes": {
+            description: "Whipped Cream Frosting Cupcakes are light, airy, and irresistibly delicious! Baked to perfection, these soft and fluffy cupcakes are topped with a smooth and delicate whipped cream frosting that melts in your mouth. Unlike heavier frostings, the whipped cream adds a light and refreshing touch, making every bite feel soft and indulgent!",
+            price: "Ghc 15 for a piece, Ghc 40 for 3 pieces"
+        },
+
+"Plain Muffins": {
+            description: "Our plain muffins are a timeless treat—soft, fluffy, and baked to perfection. With their light texture and rich, buttery flavor, they’re perfect for any time of the day!",
+            price: "Stay tuned!"
+        },
+
+"Chocolate Muffins": {
+            description: "Indulge in the deep, velvety goodness of our chocolate muffins—soft, moist, and bursting with rich cocoa flavor. Baked to perfection, each bite melts in your mouth, making it the perfect treat for chocolate lovers. Whether enjoyed as a morning delight, an afternoon pick-me-up, or a sweet indulgence, these muffins are pure chocolate bliss!",
+            price: "Stay tuned!"
+        },
+
+"Banana Muffins": {
+            description: "Our banana muffins are the perfect blend of moist, fluffy texture and rich, natural sweetness. Made with real ripe bananas, each bite is bursting with a comforting homemade flavor. Whether you enjoy them as a wholesome breakfast, a midday snack, or a treat on the go, these muffins bring a taste of warmth and nostalgia with every bite!",
+            price: "Stay tuned!"
+        },
+
+"Blueberry Muffins": {
+            description: "Our blueberry muffins are more than just a treat—they’re an experience. Each fluffy, golden-baked muffin is bursting with plump, juicy blueberries, delivering a perfect balance of sweetness and tang. With every bite, you’ll taste the harmony of soft, buttery goodness and fresh, fruity delight!",
+            price: "Stay tuned!"
+        },
+
+"Coated Nuts": {
+            description: "Our flour-coated nuts are the perfect fusion of crunch and taste. Each nut is lightly coated in a seasoned flour blend and fried or baked to crispy perfection, delivering an irresistible texture with every bite. Whether you prefer them savory, spicy, or slightly sweet, these nuts make a satisfying snack for any occasion!",
+            price: "Ghc 150 for a bowl"
+        },
+
+
+
+"Goat light Soup": {
+            description: "Experience the deep, flavors of our Goat Light/Pepper Soup—a rich, aromatic broth infused with bold African spices and slow-cooked to perfection with tender, succulent goat meat. This spicy delicacy delivers a perfect balance of heat and flavor!",
+            price: "Stay tuned!"
+        },
+
+"Chicken light Soup": {
+            description: "Experience the soul-warming delight of our Chicken Light/Pepper Soup—a perfect harmony of tender, slow-cooked chicken infused with bold African spices and a zesty, aromatic broth. Every spoonful delivers a comforting heat and a burst of rich, savory flavors that awaken your senses!",
+            price: "Stay tuned!"
+        },
+
+"Tilapia light Soup": {
+            description: "Delight in the fresh, vibrant flavors of our Tilapia Light Soup—a delicate yet bold fusion of tender tilapia, slow-simmered in a rich, aromatic broth infused with Ghanaian spices and herbs. This wholesome dish delivers a perfect balance of warmth, zest, and nourishment, making every sip a refreshing taste of home!",
+            price: "Stay Tuned!"
+        },
+
+"Ewokple with Aborbi Tadzi": {
+            description: "Experience the authentic taste of tradition with our Ewokple and Aborbi Tadzi—a perfect pairing of soft, smooth cornmeal dumpling and rich, flavorful anchovi stew. The deep, smoky essence of the Aborbi Tadzi, infused with aromatic spices and a hint of heat, complements the hearty, comforting texture of the Ewokple. Every bite is a celebration of heritage, taste, and pure satisfaction!",
+            price: "Stay tuned!"
+        },
+
+"Local Brown Rice & Pepper/ Stew": {
+            description: "Enjoy the wholesome goodness of our Local Brown Rice, perfectly paired with spicy, flavorful grounded pepper and your choice of expertly grilled or fried tilapia or herring stew. This hearty dish brings together the nutty richness of brown rice, the bold heat of traditional pepper sauce, and the smoky, savory taste of fresh fish—creating a truly satisfying and authentic culinary experience!",
+            price: "Stay tuned!"
+        },
+
+"Eba with Pork Meat & Stew/Sauce": {
+            description: "Savor the rich flavors of our perfectly prepared Eba, served with your choice of succulent pork stew, hearty goat sauce, or flavorful chicken sauce. Each combination brings a delightful balance of textures and tastes—soft, satisfying Eba paired with tender, well-seasoned meats in a rich, aromatic sauce. A true taste of home, comfort, and tradition in every bite!",
+            price: "Stay tuned!"
+        },
+
+
+"Grilled Tilapia & Ewokple": {
+            description: "Indulge in the perfect fusion of flavors with our Grilled Tilapia & Ewokple—a delightful pairing of smoky, well-seasoned tilapia grilled to perfection and soft, wholesome Ewokple. The rich, bold spices of the fish complement the smooth texture of the Ewokple, creating a satisfying and authentic taste experience. A true celebration of Ghanaian culinary heritage in every bite!",
+            price: "Stay tuned!"
+        },
+
+"Chicken Thighs": {
+            description: "Savor the juicy, smoky goodness of our Grilled Chicken Thigh—expertly marinated with aromatic spices and grilled to perfection for a crispy, flavorful exterior and tender, succulent inside. Every bite bursts with rich, savory goodness, making it the perfect choice for a satisfying and wholesome meal!",
+            price: "Stay tuned!"
+        },
+
+"Chicken Drumsticks": {
+            description: "Enjoy the irresistible taste of our Grilled Chicken Drumstick—perfectly marinated with a blend of bold spices and grilled to golden perfection. With a crispy, smoky exterior and juicy, tender meat inside, every bite is packed with mouthwatering flavor. A true delight for every chicken lover!",
+            price: "Stay tuned!"
+        },
+
+
+"Chicken Wings": {
+            description: "Treat yourself to the ultimate chicken experience with our Fried or Grilled Chicken Wings! Crispy and golden on the outside, tender and juicy on the inside—our fried wings deliver a satisfying crunch, while our grilled wings offer a smoky, charred perfection infused with bold spices. Whether you crave a crispy bite or a smoky flavor, every wing is a mouthwatering delight!",
+            price: "Stay tuned!"
+        },
+
+
+"Chicken Fillets": {
+            description: "Enjoy the crispy, golden perfection of our Butter-Coated Chicken Fillets—tender, juicy fillets enveloped in a rich, buttery coating and fried to a delightful crunch in pure vegetable oil. Each bite is a perfect balance of crispiness and succulent flavor, making it an irresistible treat for any occasion!",
+            price: "Stay tuned!"
+        },
+
+"Chicken Wraps": {
+            description: "Delight in the perfect blend of flavors with our Chicken Wraps—tender, seasoned chicken wrapped in a soft tortilla, layered with fresh veggies, and drizzled with a delicious sauce. Whether grilled or crispy, every bite is a satisfying fusion of taste and texture, making it a wholesome and flavorful meal on the go!",
+            price: "Ghc 50 for a piece"
+        },
+
+"Chicken & Cheese Wraps": {
+            description: "Indulge in the rich, savory goodness of our Chicken & Cheese Wraps—tender, seasoned chicken paired with melted cheese, wrapped in a soft tortilla, and finished with fresh veggies and a creamy sauce. Every bite delivers the perfect balance of juicy, cheesy, and flavorful goodness, making it a satisfying treat anytime!",
+            price: "Ghc 50 for a piece"
+        },
+
+"Chicken Khebab Wraps": {
+            description: "Savor the bold, smoky flavors of our Chicken Kebab Wraps—juicy, spice-marinated chicken skewers grilled to perfection and wrapped in a soft tortilla with crisp veggies and a flavorful sauce. Every bite is a delicious fusion of charred goodness, fresh textures, and mouthwatering spices, making it the perfect grab-and-go delight!",
+            price: "Ghc 50 for a piece"
+        },
+
+"Vegetable Wraps": {
+            description: "Enjoy the fresh, wholesome goodness of our Vegetable Wraps—packed with a vibrant mix of veggies, wrapped in a soft tortilla, and drizzled with a delicious, flavorful sauce. Light, nutritious, and bursting with natural flavors, this wrap is a perfect choice for a healthy and satisfying meal on the go!",
+            price: "Ghc 50 for a piece"
+        },
+
+"Fried Egg Wraps": {
+            description: "Start your day right with our Fried Egg Wraps—fluffy, perfectly seasoned eggs wrapped in a soft tortilla with fresh veggies and a flavorful sauce. Simple, delicious, and satisfying, this wholesome wrap is perfect for a quick breakfast or a light meal on the go!",
+            price: "Ghc 50 for a piece"
+        },
 
 
 
@@ -533,26 +709,30 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Function to show product details in modal
     function showProductDetails(productCard) {
-        const productName = productCard.querySelector('h3').innerText;
-        const productImage = productCard.querySelector('img').src;
+        let productName = productCard.querySelector('h3').innerText.trim();
         
+        // Normalize names to remove unnecessary spaces and line breaks
+        productName = productName.replace(/\s+/g, ' '); 
+    
+        const productImage = productCard.querySelector('img').src;
+    
         // Get product data from our dictionary
         const data = productData[productName] || {
             description: "Details coming soon. Contact us for more information about this product.",
             price: "Price available on request"
         };
-
+    
         // Populate modal with product details
         if (productModalImage) productModalImage.src = productImage;
         if (productModalName) productModalName.innerText = productName;
         if (productModalDescription) productModalDescription.innerText = data.description;
         if (productModalPrice) productModalPrice.innerText = data.price;
-
+    
         // Display the modal
         if (productModal) productModal.style.display = 'flex';
     }
+    
     
     // Initialize
     updateCartDisplay();
