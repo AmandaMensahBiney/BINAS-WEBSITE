@@ -739,6 +739,24 @@ document.addEventListener('DOMContentLoaded', function() {
     updateCartCounter();
 });
 
+document.querySelector("form").addEventListener("submit", async function(event) {
+    event.preventDefault(); // Prevent page reload
 
+    let form = event.target;
+    let formData = new FormData(form);
+
+    let response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: { "Accept": "application/json" }
+    });
+
+    if (response.ok) {
+        alert("Thank you! Your message has been sent.");
+        form.reset();
+    } else {
+        alert("Oops! Something went wrong. Please try again.");
+    }
+});
 
 

@@ -707,7 +707,7 @@
             </div>
             <div class="contact-form">
                 <h3>Send us a Message</h3>
-                <form id="contact-form">
+                <form id="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" required>
@@ -726,6 +726,8 @@
                     </div>
                     <button type="submit" class="cta-button">Send Message</button>
                 </form>
+            </div>
+            
 
 
 
@@ -843,26 +845,7 @@
 
     <script src="script.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script>
-        (function() {
-            emailjs.init("7tdfhJQk70bfAl_vE"); // Replace with your Public Key
-        })();
-
-        document.getElementById("contact-form").addEventListener("submit", function(event) {
-            event.preventDefault();
-
-            emailjs.send("service_q0525r8", "template_4ern9zf", {
-                from_name: document.getElementById("name").value,
-                from_email: document.getElementById("email").value,
-                message: document.getElementById("message").value
-            }).then(function(response) {
-                alert("Email sent successfully!");
-            }, function(error) {
-                alert("Failed to send email. Try again.");
-            });
-        });
-    </script>
+   
 
 
 </body>
