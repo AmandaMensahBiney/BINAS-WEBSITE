@@ -274,6 +274,7 @@ header {
     .hero {
         padding: 8rem 1rem;
         background-size: contain; /* Prevents excessive stretching */
+        background-repeat: no-repeat;
     }
     
     .hero-content {
@@ -297,6 +298,7 @@ header {
 
     .hero {
         background-size: contain; /* Adjust based on testing */
+        background-repeat: no-repeat;
         background-position: top center; /* Centers the image */
     }
 
