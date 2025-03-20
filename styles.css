@@ -273,7 +273,7 @@ header {
 @media (max-width: 768px) {
     .hero {
         padding: 8rem 1rem;
-        background-image: url('images/HOME\ \(1\).jpg'); /* Ensures it loads on small screens */
+        background-image: url('images/better1.jpg'); /* Ensures it loads on small screens */
         background-attachment: scroll; /* Prevents issues on mobile */
         background-size: cover;
         background-repeat: no-repeat;
