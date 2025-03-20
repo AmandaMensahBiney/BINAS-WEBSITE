@@ -273,7 +273,7 @@ header {
 @media (max-width: 768px) {
     .hero {
         padding: 8rem 1rem;
-        background-image: url('images/better1.jpg');
+        background-image: url('images/better2.jpg');
         background-size: contain; /* Prevents excessive stretching */
        
     }
@@ -298,9 +298,9 @@ header {
     }
 
     .hero {
-        background-image: url('images/better1.jpg');
+        background-image: url('images/better2.jpg');
         background-size: contain; /* Adjust based on testing */
-        background-position: top center; /* Centers the image */
+        background-position: center; /* Centers the image */
     }
 
 
