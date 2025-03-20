@@ -273,7 +273,7 @@ header {
 @media (max-width: 768px) {
     .hero {
         padding: 8rem 1rem;
-        background-size: contain; /* Prevents excessive stretching */
+        background-size: cover; /* Prevents excessive stretching */
     }
     
     .hero-content {
