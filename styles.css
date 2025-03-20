@@ -274,8 +274,8 @@ header {
     .hero {
         padding: 8rem 1rem;
         background-image: url('images/better2.jpg');
-        background-size: contain; /* Prevents excessive stretching */
-        background-repeat: no-repeat;
+        background-size: cover; /* Prevents excessive stretching */
+        
        
     }
     
@@ -300,8 +300,8 @@ header {
 
     .hero {
         background-image: url('images/better2.jpg');
-        background-size: contain; /* Adjust based on testing */
-        background-repeat: no-repeat;
+        background-size: cover; /* Adjust based on testing */
+      
         background-position: center; /* Centers the image */
     }
 
