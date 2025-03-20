@@ -163,7 +163,7 @@ header {
 /* Hero Section */
 /* Enhanced Hero Section with advanced glassmorphism effect */
 .hero {
-    background-image: url('images/HOME\ \(2\).jpg');
+    background-image: url('images/better.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Creates a parallax effect */
