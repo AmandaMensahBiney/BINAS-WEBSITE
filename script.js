@@ -231,22 +231,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
 "Plain Muffins": {
             description: "Our plain muffins are a timeless treat—soft, fluffy, and baked to perfection. With their light texture and rich, buttery flavor, they’re perfect for any time of the day!",
-            price: "Stay tuned!"
+            price: "Ghc 20 for a piece"
         },
 
 "Chocolate Muffins": {
             description: "Indulge in the deep, velvety goodness of our chocolate muffins—soft, moist, and bursting with rich cocoa flavor. Baked to perfection, each bite melts in your mouth, making it the perfect treat for chocolate lovers. Whether enjoyed as a morning delight, an afternoon pick-me-up, or a sweet indulgence, these muffins are pure chocolate bliss!",
-            price: "Stay tuned!"
+            price: "Ghc 20 for a piece"
         },
 
 "Banana Muffins": {
             description: "Our banana muffins are the perfect blend of moist, fluffy texture and rich, natural sweetness. Made with real ripe bananas, each bite is bursting with a comforting homemade flavor. Whether you enjoy them as a wholesome breakfast, a midday snack, or a treat on the go, these muffins bring a taste of warmth and nostalgia with every bite!",
-            price: "Stay tuned!"
+            price: "Ghc 20 for a piece"
         },
 
 "Blueberry Muffins": {
             description: "Our blueberry muffins are more than just a treat—they’re an experience. Each fluffy, golden-baked muffin is bursting with plump, juicy blueberries, delivering a perfect balance of sweetness and tang. With every bite, you’ll taste the harmony of soft, buttery goodness and fresh, fruity delight!",
-            price: "Stay tuned!"
+            price: "Ghc 20 for a piece"
         },
 
 "Coated Nuts": {
@@ -738,25 +738,4 @@ document.addEventListener('DOMContentLoaded', function() {
     updateCartDisplay();
     updateCartCounter();
 });
-
-document.querySelector("form").addEventListener("submit", async function(event) {
-    event.preventDefault(); // Prevent page reload
-
-    let form = event.target;
-    let formData = new FormData(form);
-
-    let response = await fetch(form.action, {
-        method: form.method,
-        body: formData,
-        headers: { "Accept": "application/json" }
-    });
-
-    if (response.ok) {
-        alert("Thank you! Your message has been sent.");
-        form.reset();
-    } else {
-        alert("Oops! Something went wrong. Please try again.");
-    }
-});
-
 

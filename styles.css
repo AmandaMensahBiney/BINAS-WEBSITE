@@ -273,6 +273,7 @@ header {
 @media (max-width: 768px) {
     .hero {
         padding: 8rem 1rem;
+        background-size: contain; /* Prevents excessive stretching */
     }
     
     .hero-content {
@@ -293,6 +294,13 @@ header {
     .hero-content {
         padding: 1.5rem;
     }
+
+    .hero {
+        background-size: cover; /* Adjust based on testing */
+        background-position: top center; /* Centers the image */
+    }
+
+
 }
 
 /* Featured Products */
@@ -547,7 +555,7 @@ header {
 .contact-container {
     display: flex;
     flex-wrap: wrap;
-    max-width: 1200px;
+    max-width: 900px;
     margin: 0 auto;
     gap: 2rem;
 }
@@ -841,9 +849,10 @@ footer::before {
 .footer-content {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
-    gap: 2rem;
+    gap: 20rem;
 }
 
 .footer-logo, .footer-links, .footer-newsletter {
@@ -853,12 +862,21 @@ footer::before {
 
 .footer-logo h2 {
     color: var(--primary-color);
-    font-size: 2rem;
+    font-size: 3rem;
+    
 }
 
 .footer-logo p {
     color: rgba(255, 255, 255, 0.8);
     margin-top: 1rem;
+}
+
+
+.gold{
+    color: #e9b43a;
+    font-size: 1.5rem;
+    display: flex;
+    
 }
 
 .footer-links h3, .footer-newsletter h3 {
