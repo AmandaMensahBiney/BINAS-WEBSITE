@@ -951,7 +951,7 @@ footer::before {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     text-align: center;
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.7);
+    color: #e9b43a;
 }
 
 /* Decorative elements */
@@ -1096,3 +1096,20 @@ footer::before {
     color: #e9b43a;
 }
 
+.developer-credit {
+    text-align: center;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5); /* Faint text */
+    padding: 10px 0;
+}
+
+.developer-credit a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.developer-credit a:hover {
+    text-decoration: underline;
+    color: rgba(255, 255, 255, 0.8);
+}
